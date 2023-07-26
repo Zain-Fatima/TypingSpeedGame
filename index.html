@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<!-- Things added below empty line are from part-2 -->
+<body>
+
+    <h1>Typing Speed Game</h1>
+
+    <!-- universal container -->
+    <div class="container">
+        <!-- input field where text will be written -->
+        <input type="text" class="textinput">
+
+        <div class="background-text">
+            <p id="pg">
+
+            </p>
+
+            <div class="containerin">
+                <!-- div for showing all kinds of results like wpm, cpm, mistakes etc -->
+                <div class="result">
+
+                    <!-- div for showing time -->
+                    <div class="time">
+                        <p class="txt1">Time</p>
+                        <p class="txt2"></p>
+                    </div>
+
+                    <!-- div for showing words per minute -->
+                    <div class="wpm">
+                        <p class="txt1">WPM</p>
+                        <p class="txt2">0</p>
+                    </div>
+
+                    <!-- div for showing mistakes -->
+                    <div class="mistake">
+                        <p class="txt1">Mistakes</p>
+                        <p class="txt2">0</p>
+                    </div>
+
+                    <!-- div for showing characters per minute -->
+                    <div class="cpm">
+                        <p class="txt1">CPM</p>
+                        <p class="txt2">0</p>
+                    </div>
+
+                </div>
+
+                <!-- button to restart the game -->
+                <button>Reset</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

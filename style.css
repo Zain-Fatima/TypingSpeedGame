@@ -1,0 +1,145 @@
+/* google font - montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%); */
+  background: linear-gradient(to bottom right,#9DB17C 0%, #2C666E 100%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.container input {
+  z-index: -10px;
+  position: absolute;
+  opacity: 0;
+}
+
+#pg {
+  background-color: white;
+  color: gray;
+
+  word-break: break-all;
+  /* this specifies how a word should be broken at the end of line in case of overflow. in this property a word will break from wherever overflow is found i.e if a word is 'science' - and the overflow occurs at 'sc' - 'sc' will be written on the same line while 'ience' will be written on the next line */
+  letter-spacing: 0.3px;
+  /* gap between letters of a word */
+  text-align: justify;
+}
+
+/* this is used for when you use your cursor and select text, the selected text will be highlighted in pink color and the color of the text will be black*/
+/* #pg::selection{
+        background-color: #ff99cc;
+        color: black;
+    } */
+
+.containerin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background: linear-gradient(to bottom right, #A3C9A8 0%, #A3C9A8 50%);
+  /* background-color: #242424; */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.result {
+  display: flex;
+  color: white;
+  /* justify-content: space-between; */
+  width: 80%;
+}
+
+.result .txt1 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.result .txt2 {
+  font-size: 20px;
+  /* font-weight: bold; */
+  background-color: #1c333b;
+  width: 100%;
+  min-width: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.result div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+.containerin button {
+  background-color: #1c333b;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 35px;
+  margin-top: 15px;
+}
+
+#pg span {
+  position: relative;
+}
+
+#pg span.active::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  background-color: #abdd98;
+  width: 100%;
+  bottom: 0;
+  /* to bring the indicator below the typed letter */
+  left: 0;
+  opacity: 0;
+  /* the percentage opacity the pink line (highlighting) will have */
+  /* border: 1px solid rgb(214, 107, 107);
+  border-radius: 2px; */
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#pg span.correct {
+  color: green;
+}
+
+#pg span.incorrect {
+  color: red;
+}
